@@ -1,7 +1,21 @@
 import React from 'react';
+import { Row, Col, Container } from 'react-grid-system';
 
-const PlayerName = () => {
-  return <div>Player Name</div>;
+const PlayerName = (props) => {
+  return <Col>{ props.name }</Col>;
 };
 
-export default PlayerName;
+const PlayersRow = (props) => {
+
+  const players = props.players;
+  return (
+    <Container fluid={true}>
+      <Row>
+        <Col></Col>
+        {players.map(player => <PlayerName name={player}/>)}
+      </Row>
+    </Container>
+  )
+}
+
+export default PlayersRow;
