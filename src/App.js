@@ -1,6 +1,5 @@
 import React from 'react';
-import InputNumeric from './components/input.js';
-import CategoryLabel from './components/category_label.js';
+import Category from './components/category.js';
 import PlayersRow from './components/player_name.js';
 import PlayerScoreRow from './components/player_score.js';
 import './App.css';
@@ -12,8 +11,7 @@ function App() {
     <div className="App">
       <PlayersRow players = {players}/>
       <PlayerScoreRow players={players}/>
-      <CategoryLabel/>
-      <InputNumeric/>
+      <Category players={players}/>
     </div>
   );
 }
