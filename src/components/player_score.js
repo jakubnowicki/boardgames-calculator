@@ -1,7 +1,20 @@
 import React from 'react';
+import { Row, Col, Container } from 'react-grid-system';
 
-const PlayerScore = () => {
-  return <div>0</div>;
+const PlayerScore = (props) => {
+  return <Col>{props.score}</Col>;
 };
 
-export default PlayerScore;
+const PlayerScoreRow = (props) => {
+  const players = props.players;
+  return (
+    <Container fluid={true}>
+      <Row>
+        <Col></Col>
+        {players.map(() => <PlayerScore score={0}/>)}
+      </Row>
+    </Container>
+  )
+}
+
+export default PlayerScoreRow;

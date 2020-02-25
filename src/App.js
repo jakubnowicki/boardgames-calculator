@@ -2,7 +2,7 @@ import React from 'react';
 import InputNumeric from './components/input.js';
 import CategoryLabel from './components/category_label.js';
 import PlayersRow from './components/player_name.js';
-import PlayerScore from './components/player_score.js';
+import PlayerScoreRow from './components/player_score.js';
 import './App.css';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <PlayersRow players = {players}/>
-      <PlayerScore/>
+      <PlayerScoreRow players={players}/>
       <CategoryLabel/>
       <InputNumeric/>
     </div>
