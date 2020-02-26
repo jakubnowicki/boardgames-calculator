@@ -2,8 +2,8 @@ import React from 'react';
 import { Row, Col, Container } from 'react-grid-system';
 
 
-const CategoryLabel = () => {
-  return <Col>Category</Col>;
+const CategoryLabel = (props) => {
+  return <Col>{props.name}</Col>;
 };
 
 class CategoryInput extends React.Component {
@@ -32,17 +32,27 @@ class CategoryInput extends React.Component {
 };
 
 
-const Category = (props) => {
-  const players = props.players;
+const CategoryRow = (props) => {
+  const {players, category_name } = props;
 
   return (
     <Container fluid={true}>
       <Row>
-        <CategoryLabel/>
+        <CategoryLabel name={category_name}/>
         {players.map(() => <CategoryInput/>)}
       </Row>
     </Container>
   )
 };
 
-export default Category;
+const CategoriesPointsSection = (props) => {
+  const  { categories, players } = props;
+
+  return (
+    <Container fluid={true}>
+      {categories.map((category) => <CategoryRow players={players} category_name={category}/>)}
+    </Container>
+  )
+}
+
+export default CategoriesPointsSection;
