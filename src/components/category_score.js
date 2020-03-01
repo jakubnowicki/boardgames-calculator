@@ -1,13 +1,8 @@
 import React from 'react';
 import { Col } from 'react-grid-system';
-import { updateScoreInput, getPlayerCategoryScore } from '../actions/index.js';
+import { updateScoreInput } from '../actions/index.js';
 import { connect } from "react-redux";
 
-const mapStateToProps = (state, ownProps) => {
-  const { player, category } = ownProps;
-  const score = getPlayerCategoryScore(player, category);
-  return {score: score}
-}
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -45,6 +40,6 @@ class CategoryInput extends React.Component {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(CategoryInput)

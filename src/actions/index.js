@@ -4,7 +4,3 @@ export const updateScoreInput = (player, category, score) => ({
   category: category,
   score: score
 })
-
-export const getPlayerCategoryScore = (player, category) => {
-  return 0
-}
