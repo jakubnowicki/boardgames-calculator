@@ -1,20 +1,17 @@
-import React from 'react';
-import { Row, Col, Container } from 'react-grid-system';
+import React from "react";
+import { Col } from "react-grid-system";
+import { connect } from "react-redux";
 
-const PlayerScore = (props) => {
+const mapStateToProps = (state, ownProps) => {
+  const { player } = ownProps;
+  const score = state["updateSingleScore"].players[player].calculate_score();
+  return {
+    score: score
+  };
+};
+
+const PlayerScore = props => {
   return <Col>{props.score}</Col>;
 };
 
-const PlayerScoreRow = (props) => {
-  const players = props.players;
-  return (
-    <Container fluid={true}>
-      <Row>
-        <Col></Col>
-        {players.map(() => <PlayerScore score={0}/>)}
-      </Row>
-    </Container>
-  )
-}
-
-export default PlayerScoreRow;
+export default connect(mapStateToProps, null)(PlayerScore);
