@@ -1,13 +1,4 @@
-class Player {
-  constructor(name) {
-    this._player_name = name;
-    this._categories_scores = {};
-  }
-
-  update_score(category, score) {
-    this._categories_scores[category] = score
-  }
-}
+import Player from './player.js'
 
 
 const initState = {
@@ -19,7 +10,6 @@ const updateSingleScore = (state = initState, action) => {
     case 'UPDATE_SINGLE_SCORE':
       const { player, category, score } = action;
       state.players[player["player"]].update_score(category["category"], score);
-
       return { players: state.players }
     default:
       return state

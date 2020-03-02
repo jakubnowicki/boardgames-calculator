@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoriesPointsSection from './components/category.js';
 import PlayersRow from './components/player_name.js';
-import PlayerScoreRow from './components/player_score.js';
+import PlayerScoreRow from './components/scores.js';
 import './App.css';
 import rootReducer from './reducers';
 import { createStore } from 'redux';
