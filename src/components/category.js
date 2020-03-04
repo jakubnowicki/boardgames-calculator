@@ -15,6 +15,7 @@ const CategoryRow = (props) => {
       <Row>
         <CategoryLabel name={category_name}/>
         {players.map((player) => <CategoryScore player={player} category={category_name}/>)}
+        <Col/>
       </Row>
     </Container>
   )

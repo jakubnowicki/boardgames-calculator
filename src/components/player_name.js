@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-grid-system';
+import AddPlayer from './add_player.js';
 
 const PlayerName = (props) => {
   return <Col>{ props.name }</Col>;
@@ -13,6 +14,7 @@ const PlayersRow = (props) => {
       <Row>
         <Col></Col>
         {players.map(player => <PlayerName name={player}/>)}
+        <Col><AddPlayer/></Col>
       </Row>
     </Container>
   )
