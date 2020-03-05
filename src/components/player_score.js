@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state, ownProps) => {
   const { player } = ownProps;
-  console.log(state.players[player])
   const score = state.players[player].calculate_score();
   return {
     score: score
