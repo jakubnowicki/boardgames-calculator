@@ -1,33 +1,43 @@
-import React from 'react';
-import { Row, Col, Container } from 'react-grid-system';
+import React from "react";
+import { Row, Col, Container } from "react-grid-system";
 import CategoryScore from "./category_score.js";
+import AddCategory from "./add_category.js";
 
-
-const CategoryLabel = (props) => {
+const CategoryLabel = props => {
   return <Col>{props.name}</Col>;
 };
 
-const CategoryRow = (props) => {
-  const {players, category_name } = props;
+const CategoryRow = props => {
+  const { players, category_name } = props;
 
   return (
     <Container fluid={true}>
       <Row>
-        <CategoryLabel name={category_name}/>
-        {players.map((player) => <CategoryScore player={player} category={category_name}/>)}
+        <CategoryLabel name={category_name} />
+        {players.map(player => (
+          <CategoryScore player={player} category={category_name} />
+        ))}
+        <Col />
       </Row>
     </Container>
-  )
+  );
 };
 
-const CategoriesPointsSection = (props) => {
-  const  { categories, players } = props;
+const CategoriesPointsSection = props => {
+  const { categories, players } = props;
 
   return (
     <Container fluid={true}>
-      {categories.map((category) => <CategoryRow players={players} category_name={category}/>)}
+      {categories.map(category => (
+        <CategoryRow players={players} category_name={category} />
+      ))}
+      <Row>
+        <Col>
+          <AddCategory />
+        </Col>
+      </Row>
     </Container>
-  )
-}
+  );
+};
 
 export default CategoriesPointsSection;

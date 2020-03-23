@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import updateSingleScore from './update_single_score.js'
+import players from './players.js';
 
 export default combineReducers({
-  updateSingleScore
+  players
 });

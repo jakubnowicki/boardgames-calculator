@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state, ownProps) => {
   const { player } = ownProps;
-  const score = state["updateSingleScore"].players[player].calculate_score();
+  const score = state.players[player].calculate_score();
   return {
     score: score
   };
