@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-grid-system';
 import CategoryScore from "./category_score.js";
+import AddCategory from "./add_category.js"
 
 
 const CategoryLabel = (props) => {
@@ -27,6 +28,7 @@ const CategoriesPointsSection = (props) => {
   return (
     <Container fluid={true}>
       {categories.map((category) => <CategoryRow players={players} category_name={category}/>)}
+      <Row><AddCategory/></Row>
     </Container>
   )
 }

@@ -11,6 +11,8 @@ const store = createStore(
   {
     players: {
       player_count: 2,
+      categories_count: 2,
+      categories: ["Category_1", "Category_2"],
       Player_1: new Player("Player_1"),
       Player_2: new Player("Player_2")
     }
@@ -19,11 +21,9 @@ const store = createStore(
 );
 
 function App() {
-  const categories = ["Category_1", "Category_2", "Category_3"];
-
   return (
     <Provider store={store}>
-      <AppContent categories={categories} />
+      <AppContent/>
     </Provider>
   );
 }

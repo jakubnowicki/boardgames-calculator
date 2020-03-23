@@ -6,6 +6,7 @@ import PlayerScoreRow from "./scores.js";
 
 const mapStateToProps = (state) => {
   const players = state.players
+  const categories = state.players.categories
   let item;
   let players_list = []
   for (item in players) {
@@ -14,7 +15,8 @@ const mapStateToProps = (state) => {
     }
   }
   return {
-    players: players_list
+    players: players_list,
+    categories: categories
   };
 };
 

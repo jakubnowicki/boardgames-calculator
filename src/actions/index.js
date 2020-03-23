@@ -9,3 +9,7 @@ export const addPlayer = (player_name = "test_player") => ({
   type: 'ADD_PLAYER',
   player_name: player_name
 })
+
+export const addCategory = () => ({
+  type: 'ADD_CATEGORY'
+})
