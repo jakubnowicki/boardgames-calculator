@@ -25,11 +25,12 @@ const CategoryRow = props => {
 
 const CategoriesPointsSection = props => {
   const { categories, players } = props;
+  console.log(categories)
 
   return (
     <Container fluid={true}>
       {categories.map(category => (
-        <CategoryRow players={players} category_name={category} />
+        <CategoryRow players={players} category_name={category._name} />
       ))}
       <Row>
         <Col>

@@ -1,4 +1,5 @@
 import Player from "./player.js";
+import Category from "./category.js"
 
 const players = (state = [], action) => {
   switch (action.type) {
@@ -10,9 +11,10 @@ const players = (state = [], action) => {
     case "ADD_CATEGORY":
       const categories_count = ++state.categories_count;
       const category_name = "Category_" + categories_count;
+      const new_category = new Category(category_name)
       return {
         ...state,
-        categories: [...state.categories, category_name]
+        categories: [...state.categories, new_category]
       };
     case "UPDATE_SINGLE_SCORE":
       const { player, category, score } = action;
