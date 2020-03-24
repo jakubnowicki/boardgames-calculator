@@ -20,6 +20,14 @@ const players = (state = [], action) => {
       const { player, category, score } = action;
       state[player.player].update_score(category["category"], score);
       return { ...state };
+    case "CHANGE_CATEGORY_NAME":
+      const { category_id, new_name } = action;
+      state.categories.map(category => {
+        if (category._id === category_id.category_id) {
+          category.change_name(new_name)
+        }
+      })
+      return {...state};
     default:
       return state;
   }

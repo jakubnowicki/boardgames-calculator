@@ -1,5 +1,10 @@
 export default class Category {
-  constructor(name) {
-    this._name = name;
+  constructor(id) {
+    this._id = id;
+    this._name = id;
+  }
+
+  change_name(new_name) {
+    this._name = new_name;
   }
 }

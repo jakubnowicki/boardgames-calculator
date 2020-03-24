@@ -13,3 +13,9 @@ export const addPlayer = (player_name = "test_player") => ({
 export const addCategory = () => ({
   type: 'ADD_CATEGORY'
 })
+
+export const updateCategoryName = (category_id, new_name) => ({
+  type: 'CHANGE_CATEGORY_NAME',
+  category_id: category_id,
+  new_name: new_name
+})
