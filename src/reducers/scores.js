@@ -37,7 +37,7 @@ const scores = (state = [], action) => {
     case "CHANGE_PLAYER_NAME":
       const { player_id, new_player_name } = action;
       state.players.map(player => {
-        if (player._id === player_id.player_id) {
+        if (player._player_id === player_id.id) {
           player.change_name(new_player_name)
         }
         return null
