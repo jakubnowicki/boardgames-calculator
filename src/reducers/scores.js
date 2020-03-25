@@ -28,7 +28,7 @@ const scores = (state = [], action) => {
     case "CHANGE_CATEGORY_NAME":
       const { category_id, new_name } = action;
       state.categories.map(category => {
-        if (category._id === category_id.category_id) {
+        if (category._id === category_id.id) {
           category.change_name(new_name)
         }
         return null

@@ -1,9 +1,9 @@
 import React from "react";
 import { Row, Col, Container } from "react-grid-system";
 import AddPlayer from "./add_player.js";
-import Popup from "reactjs-popup";
 import { connect } from "react-redux";
 import { updatePlayerName } from "../actions/index.js";
+import NameLabel from "./name_label.js"
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -26,17 +26,12 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
+
 const PlayerName = props => {
   const { name, id, updateName } = props;
   return (
     <Col>
-      <Popup trigger={<button>{name}</button>} modal closeOnDocumentClick>
-        <input
-          type="text"
-          value={name}
-          onChange={e => updateName({ id }, e.target.value)}
-        />
-      </Popup>
+      <NameLabel name={name} id={id} updateName={updateName}/>
     </Col>
   );
 };
