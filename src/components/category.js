@@ -12,7 +12,7 @@ const CategoryRow = props => {
       <Row>
         <CategoryLabel name={category_name} category_id={category_id}/>
         {players.map(player => (
-          <CategoryScore player={player} category={category_id} />
+          <CategoryScore key={player._player_id} player={player} category={category_id} />
         ))}
         <Col />
       </Row>
@@ -27,6 +27,7 @@ const CategoriesPointsSection = props => {
     <Container fluid={true}>
       {categories.map(category => (
         <CategoryRow
+          key={category._id}
           players={players}
           category_name={category._name}
           category_id={category._id}

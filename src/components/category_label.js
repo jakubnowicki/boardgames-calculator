@@ -13,10 +13,11 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = (state, ownProps) => {
   let name;
-  state.players.categories.map(category => {
+  state.scores.categories.map(category => {
     if (category._id === ownProps.category_id) {
       name = category._name;
     }
+    return null
   });
   return {
     name: name,
