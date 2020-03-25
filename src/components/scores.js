@@ -8,7 +8,7 @@ const PlayerScoreRow = (props) => {
     <Container fluid={true}>
       <Row>
         <Col/>
-        {players.map((player) => <PlayerScore player_id={player._player_id}/>)}
+        {players.map((player) => <PlayerScore key={player._player_id} player_id={player._player_id}/>)}
         <Col/>
       </Row>
     </Container>

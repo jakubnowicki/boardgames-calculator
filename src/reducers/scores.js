@@ -22,6 +22,7 @@ const scores = (state = [], action) => {
         if (player_mapped._player_id === player) {
           player_mapped.update_score(category["category"], score);
         }
+        return null
       })
       return { ...state };
     case "CHANGE_CATEGORY_NAME":
@@ -30,6 +31,7 @@ const scores = (state = [], action) => {
         if (category._id === category_id.category_id) {
           category.change_name(new_name)
         }
+        return null
       })
       return {...state};
     default:

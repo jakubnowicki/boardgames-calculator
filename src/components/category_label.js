@@ -17,6 +17,7 @@ const mapStateToProps = (state, ownProps) => {
     if (category._id === ownProps.category_id) {
       name = category._name;
     }
+    return null
   });
   return {
     name: name,
