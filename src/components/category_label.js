@@ -1,8 +1,8 @@
 import React from "react";
 import { Col } from "react-grid-system";
-import Popup from "reactjs-popup";
 import { connect } from "react-redux";
 import { updateCategoryName } from "../actions/index.js";
+import NameLabel from "./name_label.js"
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -30,9 +30,7 @@ const CategoryLabel = props => {
   const { name, category_id, updateName } = props;
   return (
     <Col>
-      <Popup trigger={<button>{name}</button>} modal closeOnDocumentClick>
-        <input type="text" value={name} onChange={e => updateName({ category_id }, e.target.value)} />
-      </Popup>
+      <NameLabel name={name} id={category_id} updateName={updateName}/>
     </Col>
   );
 };
