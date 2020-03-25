@@ -5,17 +5,10 @@ import PlayersRow from "./player_name.js";
 import PlayerScoreRow from "./scores.js";
 
 const mapStateToProps = (state) => {
-  const players = state.players
-  const categories = state.players.categories
-  let item;
-  let players_list = []
-  for (item in players) {
-    if (players[item].constructor.name === "Player") {
-      players_list.push(item)
-    }
-  }
+  const categories = state.scores.categories
+  const players = state.scores.players
   return {
-    players: players_list,
+    players: players,
     categories: categories
   };
 };

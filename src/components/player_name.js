@@ -13,7 +13,7 @@ const PlayersRow = (props) => {
     <Container fluid={true}>
       <Row>
         <Col></Col>
-        {players.map(player => <PlayerName name={player}/>)}
+        {players.map(player => <PlayerName name={player._player_name}/>)}
         <Col><AddPlayer/></Col>
       </Row>
     </Container>

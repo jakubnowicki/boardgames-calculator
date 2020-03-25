@@ -24,7 +24,7 @@ class CategoryInput extends React.Component {
     this.setState({
       value: score
     });
-    this.props.updateScore(player, category, score)
+    this.props.updateScore(player.player._player_id, category, score)
   }
 
   render() {

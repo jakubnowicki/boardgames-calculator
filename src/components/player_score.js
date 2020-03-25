@@ -3,8 +3,11 @@ import { Col } from "react-grid-system";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state, ownProps) => {
-  const { player } = ownProps;
-  const score = state.players[player].calculate_score();
+  const { player_id } = ownProps;
+  const player = state.scores.players.filter(function(player) {
+    return player._player_id === player_id;
+  });
+  const score = player[0].calculate_score();
   return {
     score: score
   };
