@@ -14,6 +14,10 @@ export default class Player {
     this._categories_scores[category] = score
   }
 
+  change_name(new_name) {
+    this._player_name = new_name;
+  }
+
   calculate_score() {
     return sumValues(this._categories_scores)
   }

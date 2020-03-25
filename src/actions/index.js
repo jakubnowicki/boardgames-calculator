@@ -19,3 +19,9 @@ export const updateCategoryName = (category_id, new_name) => ({
   category_id: category_id,
   new_name: new_name
 })
+
+export const updatePlayerName = (player_id, new_player_name) => ({
+  type: 'CHANGE_PLAYER_NAME',
+  player_id: player_id,
+  new_player_name: new_player_name
+})
