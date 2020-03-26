@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.player-name {
+  padding: 10px;
+  width: 96%;
+  font-size: 20px;
+  margin: 2%;
+  cursor: pointer;
+}
+
+.category-label {
+  padding: 10px;
+  width: 96%;
+  font-size: 20px;
+  margin: 2%;
+  cursor: pointer;
+}
+
+.player-score {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.category-score {
+  align-self: center;
+  input {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

@@ -14,7 +14,11 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const PlayerScore = props => {
-  return <Col>{props.score}</Col>;
+  return (
+    <Col>
+      <div className="player-score">{props.score}</div>
+    </Col>
+  );
 };
 
 export default connect(mapStateToProps, null)(PlayerScore);

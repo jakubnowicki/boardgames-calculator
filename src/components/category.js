@@ -14,7 +14,7 @@ const CategoryRow = props => {
         {players.map(player => (
           <CategoryScore key={player._player_id} player={player} category={category_id} />
         ))}
-        <Col />
+        <Col sm={1}/>
       </Row>
     </Container>
   );
@@ -34,7 +34,7 @@ const CategoriesPointsSection = props => {
         />
       ))}
       <Row>
-        <Col>
+        <Col className="add-button">
           <AddCategory />
         </Col>
       </Row>

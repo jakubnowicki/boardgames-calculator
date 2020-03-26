@@ -2,9 +2,9 @@ import React from "react";
 import Popup from "reactjs-popup";
 
 const NameLabel = props => {
-  const { name, id, updateName } = props;
+  const { name, id, updateName, className } = props;
   return (
-    <Popup trigger={<button>{name}</button>} modal closeOnDocumentClick>
+    <Popup trigger={<button className={className}>{name}</button>} modal closeOnDocumentClick>
         {close => (
           <input
             type="text"

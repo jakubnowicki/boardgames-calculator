@@ -9,7 +9,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const AddPlayer = props => {
-  return <button onClick={() => props.addPlayer()}>Add player</button>;
+  return <button onClick={() => props.addPlayer()}>+</button>;
 };
 
 export default connect(null, mapDispatchToProps)(AddPlayer);

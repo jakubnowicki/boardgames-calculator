@@ -29,10 +29,9 @@ class CategoryInput extends React.Component {
 
   render() {
     const { value } = this.state;
-    let { player, category, score } = this.props;
+    let { player, category } = this.props;
     return (
-      <Col>
-      <div>{score}</div>
+      <Col className="category-score">
         <input type="number" value={value} onChange={(e) => this.adjustValue(e, player={player}, category={category})}/>
       </Col>
     )
