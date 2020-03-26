@@ -31,7 +31,7 @@ const PlayerName = props => {
   const { name, id, updateName } = props;
   return (
     <Col>
-      <NameLabel name={name} id={id} updateName={updateName}/>
+      <NameLabel name={name} id={id} updateName={updateName} className="player-name"/>
     </Col>
   );
 };
@@ -48,9 +48,9 @@ const PlayersRow = props => {
       <Row>
         <Col></Col>
         {players.map(player => (
-          <PlayerNameLabel key={player._player_id} id={player._player_id} />
+          <PlayerNameLabel key={player._player_id} id={player._player_id}/>
         ))}
-        <Col>
+        <Col sm={1} className="add-button">
           <AddPlayer />
         </Col>
       </Row>

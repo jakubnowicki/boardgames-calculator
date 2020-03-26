@@ -9,7 +9,7 @@ const PlayerScoreRow = (props) => {
       <Row>
         <Col/>
         {players.map((player) => <PlayerScore key={player._player_id} player_id={player._player_id}/>)}
-        <Col/>
+        <Col sm={1}/>
       </Row>
     </Container>
   )

@@ -1,6 +1,6 @@
 import React from "react";
 import AppContent from "./components/app_content.js";
-import "./App.css";
+import "./style/App.scss";
 import rootReducer from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";

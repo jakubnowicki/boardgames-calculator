@@ -9,7 +9,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const AddCategory = props => {
-  return <button onClick={() => props.addCategory()}>Add category</button>;
+  return <button onClick={() => props.addCategory()}>+</button>;
 };
 
 export default connect(null, mapDispatchToProps)(AddCategory);

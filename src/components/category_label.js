@@ -30,7 +30,7 @@ const CategoryLabel = props => {
   const { name, category_id, updateName } = props;
   return (
     <Col>
-      <NameLabel name={name} id={category_id} updateName={updateName}/>
+      <NameLabel name={name} id={category_id} updateName={updateName} className="category-label"/>
     </Col>
   );
 };
