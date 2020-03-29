@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 const games = require("../games.json");
 
 const extract_games = games_json => {
-  let games = [{ value: "custom", label: "Custom game" }];
+  let games = [];
   for (let key in games_json.games) {
     games = [...games, { value: key, label: games_json.games[key].name }];
   }
@@ -24,7 +24,6 @@ const mapDispatchToProps = dispatch => {
 const SelectGame = props => {
   const { setGame } = props;
   const options = extract_games(games);
-  const defaultOption = options[0];
   return (
     <Dropdown
       options={options}
@@ -33,8 +32,7 @@ const SelectGame = props => {
           setGame(games.games[e.value].categories);
         }
       }}
-      value={defaultOption}
-      placeholder="Select an option"
+      placeholder="Select predefined set of categories or create your own one"
     />
   );
 };

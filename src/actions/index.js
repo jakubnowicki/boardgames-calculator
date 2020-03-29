@@ -1,6 +1,6 @@
-export const updateScoreInput = (player, category, score) => ({
+export const updateScoreInput = (player_id, category, score) => ({
   type: 'UPDATE_SINGLE_SCORE',
-  player: player,
+  player_id: player_id,
   category: category,
   score: score
 })
@@ -14,10 +14,15 @@ export const addCategory = () => ({
   type: 'ADD_CATEGORY'
 })
 
-export const updateCategoryName = (category_id, new_name) => ({
+export const removeCategory = (category_id) => ({
+  type: 'REMOVE_CATEGORY',
+  category_id: category_id
+})
+
+export const updateCategoryName = (category_id, new_category_name) => ({
   type: 'CHANGE_CATEGORY_NAME',
   category_id: category_id,
-  new_name: new_name
+  new_category_name: new_category_name
 })
 
 export const updatePlayerName = (player_id, new_player_name) => ({

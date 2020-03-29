@@ -3,6 +3,7 @@ import { Row, Col, Container } from "react-grid-system";
 import CategoryScore from "./category_score.js";
 import AddCategory from "./add_category.js";
 import CategoryLabel from "./category_label.js";
+import RemoveCategory from "./remove_category.js"
 
 const CategoryRow = props => {
   const { players, category_name, category_id } = props;
@@ -14,7 +15,9 @@ const CategoryRow = props => {
         {players.map(player => (
           <CategoryScore key={player._player_id} player={player} category={category_id} />
         ))}
-        <Col sm={1}/>
+        <Col sm={1} className="add-button">
+          <RemoveCategory category_id={category_id}/>
+        </Col>
       </Row>
     </Container>
   );
