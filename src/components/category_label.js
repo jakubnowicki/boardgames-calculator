@@ -6,8 +6,8 @@ import NameLabel from "./name_label.js"
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateName: (category_id, new_name) =>
-      dispatch(updateCategoryName(category_id, new_name))
+    updateName: (category_id, new_category_name) =>
+      dispatch(updateCategoryName(category_id, new_category_name))
   };
 };
 

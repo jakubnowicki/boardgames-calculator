@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import CategoriesPointsSection from "./category.js";
 import PlayersRow from "./player_name.js";
 import PlayerScoreRow from "./scores.js";
+import Header from "./header.js";
 
 const mapStateToProps = (state) => {
   const categories = state.scores.categories
@@ -18,6 +19,7 @@ const AppContent = (props) => {
 
   return (
     <div className="App">
+      <Header/>
       <PlayersRow players={players} />
       <PlayerScoreRow players={players} />
       <CategoriesPointsSection players={players} categories={categories} />

@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateScore: (player, category, score) => dispatch(updateScoreInput(player, category, score))
+    updateScore: (player_id, category, score) => dispatch(updateScoreInput(player_id, category, score))
   }
 }
 
