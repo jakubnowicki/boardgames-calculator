@@ -1,0 +1,27 @@
+{
+  "games": {
+    "everdell": {
+      "name": "Everdell",
+      "categories": [
+        "Cards",
+        "Point tokens",
+        "Events",
+        "Prosperity Cards",
+        "Journey Points"
+      ]
+    },
+    "7_wonders_duel": {
+      "name": "7 Wonders Duel",
+      "categories": [
+        "Blue Cards",
+        "Green Cards",
+        "Yellow Cards",
+        "Purple Cards",
+        "Wonders",
+        "Progress Tokens",
+        "Money",
+        "Military Track"
+      ]
+    }
+  }
+}

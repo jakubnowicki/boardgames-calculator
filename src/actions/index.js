@@ -25,3 +25,8 @@ export const updatePlayerName = (player_id, new_player_name) => ({
   player_id: player_id,
   new_player_name: new_player_name
 })
+
+export const setGameInStore = (categories) => ({
+  type: 'SET_GAME',
+  categories: categories
+})
