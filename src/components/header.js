@@ -41,7 +41,7 @@ const SelectGameDropdown = connect(null, mapDispatchToProps)(SelectGame);
 
 const Header = () => {
   return (
-    <Row>
+    <Row className="header-row">
       <div className="header">
         <SelectGameDropdown />
       </div>

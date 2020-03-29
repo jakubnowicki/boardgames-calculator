@@ -3,31 +3,31 @@
 }
 
 .player-name {
-  padding: 10px;
+  padding: 3%;
   width: 96%;
-  font-size: 20px;
+  font-size: 3vmin;
   margin: 2%;
   cursor: pointer;
 }
 
 .category-label {
-  padding: 10px;
+  padding: 3%;
   width: 96%;
-  font-size: 20px;
+  font-size: 3vmin;
   margin: 2%;
   cursor: pointer;
 }
 
 .player-score {
-  font-size: 40px;
+  font-size: 4vmin;
   font-weight: bold;
-  padding: 15px;
+  padding: 3%;
 }
 
 .category-score {
   align-self: center;
   input {
-    font-size: 20px;
+    font-size: 3vmin;
     width: 100%;
   }
 }
@@ -37,13 +37,34 @@
   align-items: center;
   justify-content: center;
   button {
-    font-size: 30px;
+    font-size: 4vmin;
     font-weight: bold;
     cursor: pointer;
+    width: 6vmin;
+    height: 6vmin;
   }
 }
 
-.header {
-  width: 100%;
-  box-shadow: 0 0 5px 0;
+.header-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  div.header {
+    width: 100%;
+    box-shadow: 0 0 5px 0;
+    font-size: 4vmin;
+    font-weight: bold;
+    margin-bottom: 1%;
+    span.Dropdown-arrow {
+      top: 45%;
+      right: 2%;
+      border-width: 1.5vmin 1.5vmin 0;
+    }
+  }
+}
+
+div.popup-content {
+  width: auto !important;
+  input {
+    font-size: 3vmin;
+  }
 }
