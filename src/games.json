@@ -22,6 +22,27 @@
         "Money",
         "Military Track"
       ]
+    },
+    "scythe": {
+      "name": "Scythe",
+      "categories": [
+        "Coins In Hand",
+        "Star Tokens",
+        "Territories Controlled",
+        "Resources Controlled",
+        "Structure Bonus"
+      ]
+    },
+    "wingspan": {
+      "name": "Wingspan",
+      "categories": [
+        "Birds",
+        "Bonus Cards",
+        "End-of-round Goals",
+        "Eggs",
+        "Food On Cards",
+        "Tucked Cards"
+      ]
     }
   }
 }
