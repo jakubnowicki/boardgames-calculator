@@ -43,6 +43,21 @@
         "Food On Cards",
         "Tucked Cards"
       ]
+    },
+    "clans_of_caledonia": {
+      "name": "Clans of Caledonia",
+      "categories": [
+        "Glory",
+        "Basic Goods",
+        "Processed Goods",
+        "Money",
+        "Hops",
+        "Cotton",
+        "Tobacco",
+        "Sugar cane",
+        "Export scoring",
+        "Settlement scoring"
+      ]
     }
   }
 }
