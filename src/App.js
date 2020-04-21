@@ -23,7 +23,7 @@ const store = createStore(
 function App() {
   return (
     <Provider store={store}>
-      <AppContent />
+      <AppContent/>
     </Provider>
   );
 }

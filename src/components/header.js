@@ -2,7 +2,7 @@ import React from "react";
 import { Row } from "react-grid-system";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import { setGameInStore } from "../actions/index.js";
+import { setGameInStore, setBackgroundInStore } from "../actions/index.js";
 import { connect } from "react-redux";
 
 const games = require("../games.json");
@@ -17,12 +17,13 @@ const extract_games = games_json => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setGame: categories => dispatch(setGameInStore(categories))
+    setGame: categories => dispatch(setGameInStore(categories)),
+    setBackground: background => dispatch(setBackgroundInStore(background))
   };
 };
 
 const SelectGame = props => {
-  const { setGame } = props;
+  const { setGame, setBackground } = props;
   const options = extract_games(games);
   return (
     <Dropdown
@@ -30,6 +31,7 @@ const SelectGame = props => {
       onChange={e => {
         if (e.value !== "custom") {
           setGame(games.games[e.value].categories);
+          setBackground(games.games[e.value].background);
         }
       }}
       placeholder="Select predefined set of categories or create your own one"

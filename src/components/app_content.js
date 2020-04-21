@@ -8,17 +8,24 @@ import Header from "./header.js";
 const mapStateToProps = (state) => {
   const categories = state.scores.categories
   const players = state.scores.players
+  const background = state.scores.background
   return {
     players: players,
-    categories: categories
+    categories: categories,
+    background: background
   };
 };
 
 const AppContent = (props) => {
-  const { players, categories } = props;
-
+  const { players, categories, background } = props;
+  console.log(background)
+  const background_url = background ? "url('" + background + "')" : "url()";
+  console.log(background_url);
+  const style = {
+    backgroundImage: background_url
+  }
   return (
-    <div className="App">
+    <div className="App" style={style}>
       <Header/>
       <PlayersRow players={players} />
       <PlayerScoreRow players={players} />
