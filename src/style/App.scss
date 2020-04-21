@@ -71,3 +71,23 @@ div.popup-content {
     font-size: 3vmin;
   }
 }
+
+button {
+  background-color: rgba(10, 10, 10, 0.3);
+  border: none;
+  color: white;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.Dropdown-control, .Dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.Dropdown-option.is-selected {
+    background-color: rgba(255, 255, 255, 0.7);
+}
