@@ -35,3 +35,8 @@ export const setGameInStore = (categories) => ({
   type: 'SET_GAME',
   categories: categories
 })
+
+export const setBackgroundInStore = (background) => ({
+  type: 'SET_BACKGROUND',
+  background: background
+})

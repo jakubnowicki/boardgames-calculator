@@ -9,7 +9,8 @@ const scores = (state = [], action) => {
     new_category_name,
     player_id,
     new_player_name,
-    categories
+    categories,
+    background
   } = action;
   switch (action.type) {
     case "ADD_PLAYER":
@@ -67,6 +68,11 @@ const scores = (state = [], action) => {
         ...state,
         categories: categories_set
       };
+    case "SET_BACKGROUND":
+      return {
+        ...state,
+        background: background
+      }
     default:
       return state;
   }
