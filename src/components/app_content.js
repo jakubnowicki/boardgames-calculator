@@ -26,6 +26,7 @@ const AppContent = (props) => {
   }
   return (
     <div className="App" style={style}>
+      <div class="overlay"></div>
       <Header/>
       <PlayersRow players={players} />
       <PlayerScoreRow players={players} />

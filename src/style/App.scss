@@ -5,6 +5,13 @@
   min-height: 100vh;
 }
 
+.overlay{
+  position:absolute;
+  top:0;right:0;left:0;bottom:0;
+  background-color:rgba(255,255,255,0.6);
+  z-index:0;
+}
+
 .player-name {
   padding: 3%;
   width: 96%;
@@ -67,27 +74,38 @@
 
 div.popup-content {
   width: auto !important;
+  border-radius: 10px;
   input {
     font-size: 3vmin;
   }
 }
 
 button {
-  background-color: rgba(10, 10, 10, 0.3);
+  background-color: rgb(34, 34, 34);
   border: none;
   color: white;
+  border-radius: 10px;
 }
 
 input {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(201, 200, 200, 1);
   border: none;
+  border-radius: 10px;
+  padding: 2%;
 }
 
 .Dropdown-control, .Dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
 }
 
 .Dropdown-option.is-selected {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+div.modal-outline {
+  padding: 2vmin;
+  input {
+    margin: 0;
+  }
 }

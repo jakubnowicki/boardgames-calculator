@@ -6,6 +6,7 @@ const NameLabel = props => {
   return (
     <Popup trigger={<button className={className}>{name}</button>} modal closeOnDocumentClick>
         {close => (
+          <div className="modal-outline">
           <input
             type="text"
             value={name}
@@ -16,6 +17,7 @@ const NameLabel = props => {
               }
             }}
           />
+          </div>
         )}
       </Popup>
   )
