@@ -1,7 +1,3 @@
-import {
-  compose,
-  sum,
-  values,
- } from 'ramda'
+import { compose, sum, values } from "ramda";
 
- export const sumValues = compose(sum, values);
+export const sumValues = compose(sum, values);
