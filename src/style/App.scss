@@ -34,6 +34,7 @@
   font-size: 4vmin;
   font-weight: bold;
   padding: 3%;
+  color: #4e4b4b;
 }
 
 .category-score {
@@ -117,4 +118,8 @@ div.modal-outline {
   input {
     margin: 0;
   }
+}
+
+.winner {
+  color: red;
 }

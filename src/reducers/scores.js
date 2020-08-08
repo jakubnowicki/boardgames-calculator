@@ -1,6 +1,18 @@
 import Player from "./player.js";
 import Category from "./category.js";
 
+const check_winner = players => {
+  const scores = players.reduce(function (scores, player) {
+    scores[player._player_id] = player._player_score;
+    return scores;
+  }, {});
+  const winning_score = Object.values(scores).reduce((a,b) => Math.max(a, b))
+  const winning_player = Object.keys(scores).filter(
+    (player) => scores[player] === winning_score
+  );
+  return winning_player
+}
+
 const scores = (state = [], action) => {
   const {
     category_id,
@@ -38,6 +50,14 @@ const scores = (state = [], action) => {
       state.players.map(player_mapped => {
         if (player_mapped._player_id === player_id) {
           player_mapped.update_score(category["category"], score);
+        }
+        return null;
+      });
+      const winner = check_winner(state.players)
+      state.players.map(player_mapped => {
+        player_mapped._winner = false;
+        if (winner.includes(player_mapped._player_id)) {
+          player_mapped._winner = true;
         }
         return null;
       });
