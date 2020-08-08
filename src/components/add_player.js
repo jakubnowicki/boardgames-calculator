@@ -2,13 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { addPlayer } from "../actions/index.js";
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    addPlayer: () => dispatch(addPlayer())
+    addPlayer: () => dispatch(addPlayer()),
   };
 };
 
-const AddPlayer = props => {
+const AddPlayer = (props) => {
   return <button onClick={() => props.addPlayer()}>+</button>;
 };
 

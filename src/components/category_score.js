@@ -1,30 +1,30 @@
-import React from 'react';
-import { Col } from 'react-grid-system';
-import { updateScoreInput } from '../actions/index.js';
+import React from "react";
+import { Col } from "react-grid-system";
+import { updateScoreInput } from "../actions/index.js";
 import { connect } from "react-redux";
-
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateScore: (player_id, category, score) => dispatch(updateScoreInput(player_id, category, score))
-  }
-}
+    updateScore: (player_id, category, score) =>
+      dispatch(updateScoreInput(player_id, category, score)),
+  };
+};
 
 class CategoryInput extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      value: 0
-    }
+      value: 0,
+    };
   }
 
   adjustValue(v, player, category) {
     const score = v.target.value;
     this.setState({
-      value: score
+      value: score,
     });
-    this.props.updateScore(player.player._player_id, category, score)
+    this.props.updateScore(player.player._player_id, category, score);
   }
 
   render() {
@@ -32,13 +32,20 @@ class CategoryInput extends React.Component {
     let { player, category } = this.props;
     return (
       <Col className="category-score">
-        <input type="number" value={value} onChange={(e) => this.adjustValue(e, player={player}, category={category})}/>
+        <input
+          type="number"
+          value={value}
+          onChange={(e) =>
+            this.adjustValue(
+              e,
+              (player = { player }),
+              (category = { category })
+            )
+          }
+        />
       </Col>
-    )
+    );
   }
-};
+}
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(CategoryInput)
+export default connect(null, mapDispatchToProps)(CategoryInput);

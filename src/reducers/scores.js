@@ -1,17 +1,17 @@
 import Player from "./player.js";
 import Category from "./category.js";
 
-const check_winner = players => {
+const check_winner = (players) => {
   const scores = players.reduce(function (scores, player) {
     scores[player._player_id] = player._player_score;
     return scores;
   }, {});
-  const winning_score = Object.values(scores).reduce((a,b) => Math.max(a, b))
+  const winning_score = Object.values(scores).reduce((a, b) => Math.max(a, b));
   const winning_player = Object.keys(scores).filter(
     (player) => scores[player] === winning_score
   );
-  return winning_player
-}
+  return winning_player;
+};
 
 const scores = (state = [], action) => {
   const {
@@ -22,7 +22,7 @@ const scores = (state = [], action) => {
     player_id,
     new_player_name,
     categories,
-    background
+    background,
   } = action;
   switch (action.type) {
     case "ADD_PLAYER":
@@ -36,25 +36,25 @@ const scores = (state = [], action) => {
       const new_category = new Category(category_name);
       return {
         ...state,
-        categories: [...state.categories, new_category]
+        categories: [...state.categories, new_category],
       };
     case "REMOVE_CATEGORY":
-      const updated_categories = state.categories.filter(category => {
+      const updated_categories = state.categories.filter((category) => {
         return category._id !== category_id;
       });
       return {
         ...state,
-        categories: updated_categories
+        categories: updated_categories,
       };
     case "UPDATE_SINGLE_SCORE":
-      state.players.map(player_mapped => {
+      state.players.map((player_mapped) => {
         if (player_mapped._player_id === player_id) {
           player_mapped.update_score(category["category"], score);
         }
         return null;
       });
-      const winner = check_winner(state.players)
-      state.players.map(player_mapped => {
+      const winner = check_winner(state.players);
+      state.players.map((player_mapped) => {
         player_mapped._winner = false;
         if (winner.includes(player_mapped._player_id)) {
           player_mapped._winner = true;
@@ -63,7 +63,7 @@ const scores = (state = [], action) => {
       });
       return { ...state };
     case "CHANGE_CATEGORY_NAME":
-      state.categories.map(category => {
+      state.categories.map((category) => {
         if (category._id === category_id.id) {
           category.change_name(new_category_name);
         }
@@ -71,7 +71,7 @@ const scores = (state = [], action) => {
       });
       return { ...state };
     case "CHANGE_PLAYER_NAME":
-      state.players.map(player => {
+      state.players.map((player) => {
         if (player._player_id === player_id.id) {
           player.change_name(new_player_name);
         }
@@ -80,19 +80,19 @@ const scores = (state = [], action) => {
       return { ...state };
     case "SET_GAME":
       state.categories_count = 0;
-      const categories_set = categories.map(category => {
+      const categories_set = categories.map((category) => {
         ++state.categories_count;
         return new Category("Category_" + state.categories_count, category);
       });
       return {
         ...state,
-        categories: categories_set
+        categories: categories_set,
       };
     case "SET_BACKGROUND":
       return {
         ...state,
-        background: background
-      }
+        background: background,
+      };
     default:
       return state;
   }

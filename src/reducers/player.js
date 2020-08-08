@@ -1,4 +1,4 @@
-import { sumValues } from '../utils/utils.js';
+import { sumValues } from "../utils/utils.js";
 
 export default class Player {
   constructor(name, id = null) {
@@ -13,8 +13,8 @@ export default class Player {
   }
 
   update_score(category, score) {
-    this._categories_scores[category] = score
-    this._player_score = sumValues(this._categories_scores)
+    this._categories_scores[category] = score;
+    this._player_score = sumValues(this._categories_scores);
   }
 
   change_name(new_name) {
@@ -22,6 +22,6 @@ export default class Player {
   }
 
   calculate_score() {
-    return this._player_score
+    return this._player_score;
   }
 }
