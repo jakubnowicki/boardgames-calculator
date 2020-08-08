@@ -6,10 +6,12 @@
 }
 
 .overlay{
-  position:absolute;
+  position: fixed;
+  height: 100%;
   top:0;right:0;left:0;bottom:0;
   background-color:rgba(255,255,255,0.6);
   z-index:0;
+  min-height: 100vh;
 }
 
 .player-name {
@@ -99,12 +101,19 @@ input {
   border: none;
 }
 
+.Dropdown-menu {
+  max-height: 90vh;
+}
+
 .Dropdown-option.is-selected {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
 div.modal-outline {
   padding: 2vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   input {
     margin: 0;
   }
