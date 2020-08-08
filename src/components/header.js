@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 const games = require("../games.json");
 
-const extract_games = games_json => {
+const extract_games = (games_json) => {
   let games = [];
   for (let key in games_json.games) {
     games = [...games, { value: key, label: games_json.games[key].name }];
@@ -15,20 +15,20 @@ const extract_games = games_json => {
   return games;
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    setGame: categories => dispatch(setGameInStore(categories)),
-    setBackground: background => dispatch(setBackgroundInStore(background))
+    setGame: (categories) => dispatch(setGameInStore(categories)),
+    setBackground: (background) => dispatch(setBackgroundInStore(background)),
   };
 };
 
-const SelectGame = props => {
+const SelectGame = (props) => {
   const { setGame, setBackground } = props;
   const options = extract_games(games);
   return (
     <Dropdown
       options={options}
-      onChange={e => {
+      onChange={(e) => {
         if (e.value !== "custom") {
           setGame(games.games[e.value].categories);
           setBackground(games.games[e.value].background);

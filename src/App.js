@@ -14,8 +14,8 @@ const store = createStore(
       player_count: 2,
       categories_count: 2,
       categories: [new Category("Category_1"), new Category("Category_2")],
-      players: [new Player("Player_1"), new Player("Player_2")]
-    }
+      players: [new Player("Player_1"), new Player("Player_2")],
+    },
   },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
@@ -23,7 +23,7 @@ const store = createStore(
 function App() {
   return (
     <Provider store={store}>
-      <AppContent/>
+      <AppContent />
     </Provider>
   );
 }

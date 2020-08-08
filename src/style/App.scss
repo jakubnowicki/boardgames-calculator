@@ -5,12 +5,15 @@
   min-height: 100vh;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   height: 100%;
-  top:0;right:0;left:0;bottom:0;
-  background-color:rgba(255,255,255,0.6);
-  z-index:0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 0;
   min-height: 100vh;
 }
 
@@ -97,7 +100,8 @@ input {
   padding: 2%;
 }
 
-.Dropdown-control, .Dropdown-menu {
+.Dropdown-control,
+.Dropdown-menu {
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
 }
@@ -107,7 +111,7 @@ input {
 }
 
 .Dropdown-option.is-selected {
-    background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 div.modal-outline {
