@@ -8,15 +8,18 @@ const mapStateToProps = (state, ownProps) => {
     return player._player_id === player_id;
   });
   const score = player[0].calculate_score();
+  const winner = player[0]._winner;
   return {
-    score: score
+    score: score,
+    winner: winner
   };
 };
 
 const PlayerScore = props => {
+  const classes = props.winner ? "player-score winner" : "player-score"
   return (
     <Col>
-      <div className="player-score">{props.score}</div>
+      <div className={classes}>{props.score}</div>
     </Col>
   );
 };
