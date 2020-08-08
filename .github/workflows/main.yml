@@ -24,3 +24,4 @@ jobs:
           github_token: ${{ secrets.github_token }}
           # Enable linters
           prettier: true
+          prettier_dir: src/
