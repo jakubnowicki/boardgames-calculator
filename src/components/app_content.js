@@ -18,9 +18,7 @@ const mapStateToProps = (state) => {
 
 const AppContent = (props) => {
   const { players, categories, background } = props;
-  console.log(background)
   const background_url = background ? "url('" + background + "')" : "url()";
-  console.log(background_url);
   const style = {
     backgroundImage: background_url
   }
