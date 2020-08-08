@@ -7,7 +7,7 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Install dependencies
         run: yarn
@@ -17,3 +17,10 @@ jobs:
 
       - name: Test
         run: yarn test --watchAll=false
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          prettier: true
