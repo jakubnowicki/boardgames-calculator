@@ -2,7 +2,7 @@
 
 Created by: [Jakub Nowicki](q.nowicki@gmail.com)
 
-This small app allows you to calculate players scores in a board game. You can use one of the provided presets or create your one one. Deployed app is available here: [https://boardgames-calculator.herokuapp.com/](https://boardgames-calculator.herokuapp.com/)
+This small app allows you to calculate players scores in a board game. You can use one of the provided presets or create your one one. Deployed app is available [here](https://boardgamescalculator.xyz/).
 
 ## Development
 
